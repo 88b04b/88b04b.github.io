@@ -1,6 +1,7 @@
 $(function () {
     $('#fullpage').fullpage({
         // responsiveWidth: 768,
+        scrollOverflow: true,
         afterLoad: function (el, idx) {
             setTimeout(function () {
                 $('.intro').addClass('animation');
@@ -20,6 +21,8 @@ $(function () {
         $(this).toggleClass('active');
         $('aside').toggleClass('active');
         $('.container').toggleClass('menu_active');
+
+        // $('body').toggleClass('body_fixed');
 
         // if ($('aside').hasClass('active')) {
         //     $('body').on('scroll touchmove mousewheel', function (event) {

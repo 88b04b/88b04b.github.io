@@ -60,7 +60,8 @@ p {
     left: 0;
     width: 100%;
     height: calc(100% - 10px);
-    border: 1px dashed rgba(255, 255, 255, 0.6);
+    border-top: 1px dashed rgba(255, 255, 255, 0.6);
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.6);
 }
 
 nav {
@@ -728,4 +729,139 @@ aside ul li::before {
     height: 3px;
     background: #ff9999;
     transform: rotate(-45deg) translateY(-3px);
+}
+
+
+@media (max-width: 768px) {
+
+    .container {
+        overflow: hidden;
+        height: auto;
+    }
+
+    .container.menu_active {
+        height: 100%;
+    }
+
+    .pagination {
+        top: 10px;
+        width: 200px;
+        font-size: 16px;
+        transform: rotate(0);
+        margin: 0;
+        clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 0 100%, 0 0);
+        justify-content: flex-start;
+    }
+
+    .contents_btn {
+        top: 20px;
+        right: 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .content {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+        margin-top: 7vh;
+        gap: 7vh 0;
+        justify-content: flex-start;
+    }
+
+    .content .img_box {
+        width: 100%;
+        transform: none;
+    }
+
+    .content .thumb_pc {
+        width: auto;
+        border-radius: 5px;
+    }
+
+    .content .thumb_m {
+        border-radius: 5px;
+        width: 25vw;
+        right: 20px;
+        bottom: -25px;
+    }
+
+    .description {
+        width: auto;
+    }
+
+    .description strong {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .description h2 {
+        font-size: 32px;
+        margin-bottom: 4vh;
+    }
+
+    .description p {
+        font-size: 16px;
+    }
+
+    .description hr {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .description table {
+        margin-bottom: 20px;
+        letter-spacing: -0.04em;
+    }
+
+    .description table tr {
+        height: 25px;
+    }
+
+    .description table th {
+        font-size: 16px;
+    }
+
+    .description table td {
+        font-size: 14px;
+    }
+
+    .description .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .pf02 .description,
+    .pf04 .description,
+    .pf06 .description {
+        order: 0;
+    }
+
+    .contact .circle {
+        display: none;
+    }
+
+    .contact table {
+        width: 100%;
+        margin-top: 12vh;
+    }
+
+    .contact table figure {
+        width: calc(100% - 100px);
+        margin: 0 auto;
+    }
+
+    .contact td {
+        display: block;
+        padding: 0 15px;
+        margin-bottom: 45px;
+    }
+
+    .contact table h3+hr {
+        width: 100%;
+    }
+
 }
