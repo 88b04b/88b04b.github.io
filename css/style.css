@@ -422,6 +422,7 @@ nav li.active a::before {
 .description table th {
     font-size: 18px;
     font-weight: 500;
+    min-width: 60px;
 }
 
 .color {
