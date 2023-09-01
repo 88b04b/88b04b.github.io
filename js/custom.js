@@ -55,7 +55,7 @@ $(function () {
 
     // resize했을 때 새로고침
     const delay = 300;
-    const timer = null;
+    let timer = null;
     $(window).on('resize', function () {
         clearTimeout(timer);
         timer = setTimeout(function () {
