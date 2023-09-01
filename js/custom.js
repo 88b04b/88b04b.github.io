@@ -53,4 +53,14 @@ $(function () {
         $('.contact .circle').parallax(30, e);
     });
 
+    // resize했을 때 새로고침
+    const delay = 300;
+    const timer = null;
+    $(window).on('resize', function () {
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+            document.location.reload();
+        }, delay);
+    });
+
 });
