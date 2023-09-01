@@ -1,6 +1,6 @@
 $(function () {
     $('#fullpage').fullpage({
-        responsiveWidth: 768,
+        // responsiveWidth: 768,
         afterLoad: function (el, idx) {
             setTimeout(function () {
                 $('.intro').addClass('animation');
