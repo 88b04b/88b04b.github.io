@@ -196,6 +196,14 @@ nav li.active a::before {
 }
 
 .draw_butterfly {
+    opacity: 0;
+}
+
+.draw_flower {
+    opacity: 0;
+}
+
+.intro.animation .draw_butterfly {
     stroke-dasharray: 2072;
     stroke-dashoffset: 2072;
     animation: butterfly 1.5s 4s linear both;
@@ -205,9 +213,10 @@ nav li.active a::before {
     left: 50%;
     margin-top: -360px;
     z-index: -1;
+    opacity: 1;
 }
 
-.draw_flower {
+.intro.animation .draw_flower {
     stroke-dasharray: 4883;
     stroke-dashoffset: 4883;
     animation: flower 4s 4s linear both;
@@ -218,6 +227,7 @@ nav li.active a::before {
     margin-left: -965px;
     margin-top: -50px;
     z-index: -1;
+    opacity: 1;
 }
 
 @keyframes butterfly {
