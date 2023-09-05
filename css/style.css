@@ -195,6 +195,51 @@ nav li.active a::before {
     pointer-events: none;
 }
 
+.draw_butterfly {
+    stroke-dasharray: 2072;
+    stroke-dashoffset: 2072;
+    animation: butterfly 1.5s 4s linear both;
+    width: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -360px;
+    z-index: -1;
+}
+
+.draw_flower {
+    stroke-dasharray: 4883;
+    stroke-dashoffset: 4883;
+    animation: flower 4s 4s linear both;
+    width: 930px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -965px;
+    margin-top: -50px;
+    z-index: -1;
+}
+
+@keyframes butterfly {
+    0% {
+        stroke-dashoffset: 2072;
+    }
+
+    100% {
+        stroke-dashoffset: 4144;
+    }
+}
+
+@keyframes flower {
+    0% {
+        stroke-dashoffset: 4883;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
 .intro .fp-tableCell {
     display: flex;
     flex-direction: column;
@@ -754,12 +799,20 @@ aside ul li::before {
         justify-content: flex-start;
     }
 
+    nav {
+        display: none;
+    }
+
     .contents_btn {
         top: 20px;
         right: 20px;
     }
 
-    nav {
+    .draw_butterfly {
+        display: none;
+    }
+
+    .draw_flower {
         display: none;
     }
 
