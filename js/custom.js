@@ -11,7 +11,7 @@ $(function () {
             }
         },
         onLeave: function (index, nextIndex, direction) {
-            const page_title = ['INTRO', 'PROJECT 01', 'PROJECT 02', 'PROJECT 03', 'PROJECT 04', 'PROJECT 05', 'PROJECT 06', 'CONTACT']
+            const page_title = ['INTRO', 'PROJECT 01', 'PROJECT 02', 'PROJECT 03', 'PROJECT 04', 'PROJECT 05', 'PROJECT 06', 'DESIGN', 'CONTACT']
             $('nav ul li').eq(nextIndex - 1).addClass('active').siblings().removeClass('active');
             $('.pagination').text(page_title[nextIndex - 1]);
         },

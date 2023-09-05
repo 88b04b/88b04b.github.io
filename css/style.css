@@ -348,7 +348,7 @@ nav li.active a::before {
 }
 
 .content {
-    max-width: 1500px;
+    max-width: 1550px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -596,8 +596,109 @@ nav li.active a::before {
     background: #444;
 }
 
+.design * {
+    /* outline: 1px solid turquoise; */
+}
+
+.design .inner {
+    max-width: 1550px;
+    margin: 0 auto;
+    padding-right: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+}
+
+.design .description {
+    margin-bottom: 30px;
+    transform: translateY(-100px);
+}
+
+.design .left .description h2::before {
+    transition: width 0.5s 1s;
+}
+
+.design .left .description h2::after {
+    transition: right 0.5s 1s, opacity 0.5s 1.3s;
+}
+
+.design .right .description {
+    transition: 0.5s 0.5s;
+}
+
+.design .right .description h2::before {
+    transition: width 0.5s 1.5s;
+}
+
+.design .right .description h2::after {
+    transition: right 0.5s 1.5s, opacity 0.5s 1.8s;
+}
+
+.design .description p {
+    display: inline-block;
+    margin-left: 25px;
+    vertical-align: sub;
+}
+
+.design .description p+span {
+    display: block;
+    font-size: 15px;
+    line-height: 135%;
+    word-break: keep-all;
+    color: rgba(100, 84, 82, 0.7);
+}
+
+.design figure {
+    position: relative;
+    background: white;
+    box-shadow: 0px 5px 15px 0px rgba(100, 84, 82, 0.35);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.design figure::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transition: background-color 0.5s;
+}
+
+.design figure a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 18px;
+    background: white;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #645452;
+    margin-right: 10px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 5;
+    transition: opacity 0.5s;
+}
+
+.design figure:hover a {
+    opacity: 1;
+    visibility: visible;
+}
+
+.design figure:hover::after {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.design figure img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
 .contact .inner {
-    max-width: 1500px;
+    max-width: 1550px;
     margin: 0 auto;
 }
 
@@ -902,6 +1003,58 @@ aside ul li::before {
     .pf04 .description,
     .pf06 .description {
         order: 0;
+    }
+
+    .design .inner {
+        margin: 10vh 0 20vh;
+        padding: 0 15px;
+        grid-template-columns: 1fr;
+        gap: 45px 0;
+    }
+
+    .design .inner>* {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .design .description {
+        margin-bottom: 0;
+        white-space: normal;
+        order: 1;
+    }
+
+    .design .description p {
+        display: block;
+        margin-left: 0;
+        margin-bottom: 5px;
+    }
+
+    .design figure {
+        margin-bottom: 30px;
+    }
+
+    .design figure::after {
+        display: none;
+    }
+
+    .design figure a {
+        visibility: visible;
+        opacity: 1;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 35px;
+        transform: none;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+        background: rgba(0, 0, 0, 0.3);
+        color: white;
+        text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
     }
 
     .contact .circle {
