@@ -596,10 +596,6 @@ nav li.active a::before {
     background: #444;
 }
 
-.design * {
-    /* outline: 1px solid turquoise; */
-}
-
 .design .inner {
     max-width: 1550px;
     margin: 0 auto;
@@ -887,7 +883,6 @@ aside ul li::before {
     background: #ff9999;
     transform: rotate(-45deg) translateY(-3px);
 }
-
 
 @media (max-width: 768px) {
 
